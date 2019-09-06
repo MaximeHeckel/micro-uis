@@ -1,15 +1,33 @@
 import React from 'react';
+import { Switch, Link, Route, withRouter } from 'react-router-dom';
 import styled from '@emotion/styled';
 
+// Test: passing a value through a context from the parent app to the child app
+// Here the theme is provided from the parent app and is consumed by ui-blue
 const MyStyledComponent = styled('h2')`
   color: ${p => p.theme.blue};
 `;
 
-const App = () => {
+const App = props => {
+  console.log(props);
   return (
-    <div>
-      <MyStyledComponent>Styled React here!</MyStyledComponent>
-    </div>
+    <Switch>
+      <Route
+        path={props.match.url}
+        exact
+        render={matchProps => {
+          <MyStyledComponent>Styled React here</MyStyledComponent>;
+        }}
+      />
+      <Route
+        path={`/purple`}
+        exact
+        render={matchProps => {
+          console.log(matchProps);
+          return <div>I am Purple</div>;
+        }}
+      />
+    </Switch>
   );
 };
-export default App;
+export default withRouter(App);

@@ -31,6 +31,12 @@ module.exports = {
       commonjs: 'react-dom',
       amd: 'react-dom'
     },
+    'react-router-dom': {
+      root: 'ReactRouterDom',
+      commonjs2: 'react-router-dom',
+      commonjs: 'react-router-dom',
+      amd: 'react-router-dom'
+    },
     '@emotion/core': {
       root: '@emotion/core',
       commonjs2: '@emotion/core',
