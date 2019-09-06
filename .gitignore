@@ -1,0 +1,10 @@
+ui-red/node_modules
+ui-blue/node_modules
+container-ui/node_modules
+node_modules
+
+yarn-error.log
+.DS_Store
+.vscode
+
+

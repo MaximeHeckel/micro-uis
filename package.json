@@ -1,0 +1,17 @@
+{
+  "name": "micro-uis",
+  "version": "0.1.0",
+  "description": "Micro UIs test",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "yarn workspace ui-blue clean && yarn workspace ui-red clean",
+    "build": "yarn workspace ui-blue build && yarn workspace ui-red build",
+    "start": "yarn workspace container-ui start"
+  },
+  "workspaces": [
+    "container-ui",
+    "ui-blue",
+    "ui-red"
+  ]
+}
